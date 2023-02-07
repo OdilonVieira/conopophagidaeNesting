@@ -1,6 +1,5 @@
 # Author: Odilon Vieira 
-# Date: February 1, 2023
-setwd("/mnt/chromeos/removable/ovieira_128/artigo")
+# Date: February 7, 2023
 
 #libraries required
 library(dplyr)
@@ -72,7 +71,7 @@ summarizedNests_txt = select(conopophagidaeNest, -Source) %>%
 summarizedEggs_txt = select(conopophagidaeEggs, -c(Source, Clutch.Size, Clutches)) %>%
   group_by(Species) %>%
   summarise_all(function(x){statistics(x)$textFormat})
-#statistics for clutches
+#statistics for clutchess
 summarizedClutches_txt = group_by(totalClutches, Species) %>%
   summarise(clutchSize = statistics(Clutch.Size)$textFormat)
 #merge datasets
