@@ -80,6 +80,8 @@ nestingConopophagidaeStatistics = left_join(summarizedNests_txt,summarizedEggs_t
   left_join(summarizedClutches_txt,by="Species") %>%
   left_join(sources,by="Species")
 
+#View(nestingConopophagidaeStatistics)
+
 #Specimens of Conopophaga cearae on MHNCE and MN collections with information about gonads
 gonads = tibble(
   Voucher = c("MHNCE-0200","MHNCE-0201","MHNCE-0341",rep("MN-42745",2),rep("MN-42746",2),
